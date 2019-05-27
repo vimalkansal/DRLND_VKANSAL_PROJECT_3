@@ -11,7 +11,7 @@ import model
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class MADDPG():
-    """Meta agent that contains the two DDPG agents and shared replay buffer."""
+    """This is the containing agent that in turn cotains to DDPG based agents with a shared experience replay buffer"""
 
     def __init__(self, action_size=2, seed=0, 
                  n_agents=2,
